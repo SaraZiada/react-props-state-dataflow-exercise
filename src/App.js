@@ -54,8 +54,6 @@ class App extends Component {
       { name: "Microsoft", revenue: 300 },
       { name: "Google", revenue: 600 }]
 
-
-
     return (
       <div>
 
@@ -112,28 +110,30 @@ class App extends Component {
         <div className="ex-space">
           <h4 className="ex-title">Exercise 1</h4>
           <div className="exercise" id="ex-1">
-            {/* your code here */}
+            {<Hudini />}
           </div>
         </div>
 
         <div className="ex-space">
           <h4 className="ex-title">Exercise 2</h4>
           <div className="exercise" id="ex-2">
-            {/* your code here */}
+            <Landing user={this.state.user} store={this.state.store} />
+            <hr />
+            <Home store={this.state.store}/>
           </div>
         </div>
 
         <div className="ex-space">
           <h4 className="ex-title">Exercise 3</h4>
           <div className="exercise" id="ex-3">
-            {/* your code here */}
+            {this.state.currentPage === "Landing" ?  <Landing user={this.state.user} store={this.state.store} /> :  <Home store={this.state.store}/>}
           </div>
         </div>
 
         <div className="ex-space">
           <h4 className="ex-title">Exercise 4</h4>
           <div className="exercise" id="ex-4">
-            {/* your code here */}
+            <Home store={this.state.store} shouldDiscount={this.state.shouldDiscount} />
           </div>
         </div>
 
